@@ -20,7 +20,7 @@ header h1{
     animation: glow 1.5s infinite alrtenate;
     position:relative ;
     z-index: 1;
-    background: linear-gradient(90deg,#e1e5e6),#f4f4f4;
+    background: linear-gradient(90deg,#e1e5e6),#f4f3f4f4;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px rgb(0, 0, 0, 0, 5);
