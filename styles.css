@@ -1,13 +1,13 @@
-body,h1,h2, p{
+body,h1,h2,p{
     margin: 0;
     padding: 30px;
-    font-family: arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
 body{
-    background-color:   rgb(255, 255, 255);
-    color: #000000;
+    background-color: #071e69;
+    color: white;
     text-align: center;
     padding: 20px;
 }
@@ -17,13 +17,13 @@ header h1{
     text-transform: uppercase;
     letter-spacing: 4px;
     margin: 0;
-    animation: glow 1.5s infinite alrtenate;
-    position:relative ;
+    animation: glow 1.5s infinite alternate;
+    position: relative;
     z-index: 1;
-    background: linear-gradient(90deg,#e1e5e6),#f4f3f4f4;
+    background: linear-gradient(90deg,#e1e5e5,#f4f4f4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 10px rgb(0, 0, 0, 0, 5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header::before{
@@ -31,53 +31,55 @@ header::before{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-100%, -100%);
+    transform: translate(-50%,50%);
     width: 120%;
     height: 150%;
-    background: radial-gradient(circle,rgba(255,255,255,0,29) 0% 00);
+    background: radial-gradient(circle,rgba(255,255,255,0.2) 0% transparent 70%);
     z-index: 0;
-    animation: pulse 6s;
+    animation: pulse 6s infinite;
+    border-radius: 50%;
 }
 
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
+@keyframes pulse{
+    0%{
+        transform: translate(-50%,-50%) scale(1);
         opacity: 1;
     }
-    50% {
-        transform: translate(-50%, 50%)scale(1.2);
-        opacity: 0.6;
+    50%{
+        transform: translate(-50%,-50%) scale(1.2);
+        opacity: 1;
     }
-    100% {
-        transform: translate(-50%, 50%) scale(1);
+    100%{
+        transform: translate(-50%,-50%) scale(1);
         opacity: 1;
     }
 }
 
-P{
+p{
     color: black;
 }
 
 h1{
-font-size: 2rem;
-color: rgb(0, 255, 157);
+    font-size: 2rem;
+    color: aquamarine;
 }
+
 h2{
-    color: aliceblue;
+    color: black;
 }
+
 main{
     max-width: 600px;
     margin: 0 auto;
     position: relative;
-
 }
 
 .panel{
-    display: none;
+    display: none; 
     padding: 20px;
-    background-color: #e1e5e6;
+    background-color: #e9e9f4;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.5s ease;
 }
 
@@ -87,7 +89,7 @@ main{
     margin-bottom: 15px;
 }
 
-.panel h2 {
+.panel h2{
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -97,15 +99,15 @@ main{
     margin-bottom: 20px;
 }
 
-.navigation {
+.navigation{
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
 .button{
-    background-color: aqua;
-    color: #e1e5e6;
+    background-color: #0077b6;
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -113,19 +115,19 @@ main{
     transition: background-color 0.3s;
 }
 
-.button:hover {
-    background-color: blue;
+.button:hover{
+    background-color: #00a8e8;
 }
 
-#panel1:checked~#content-panel1,
-#panel2:checked~#content-panel2,
-#panel3:checked~#content-panel3,
-#panel4:checked~#content-panel4,
-#panel5:checked~#content-panel5{
-    displplay:block;
+#panel1:checked ~ #content-panel1,
+#panel2:checked ~ #content-panel2,
+#panel3:checked ~ #content-panel3,
+#panel4:checked ~ #content-panel4,
+#panel5:checked ~ #content-panel5{
+    display: block;
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn{
     from{
         opacity: 0;
         transform: translateY(20px);
@@ -136,6 +138,6 @@ main{
     }
 }
 
-input[type="radio"] {
+input[type="radio"]{
     display: none;
 }
